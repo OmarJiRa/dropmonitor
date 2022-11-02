@@ -45,7 +45,7 @@ if authentication_status:
         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
 
     # Embedding PDF in HTML
-    pdf_display = F'<embed src="https://drive.google.com/file/d/1XlrQRw36ZZlQLTa3g2_966ptu-wRlDux/view?usp=sharing" width="100%" height="800" type="application/pdf">'
+    pdf_display = F'<iframe src="https://drive.google.com/file/d/1XlrQRw36ZZlQLTa3g2_966ptu-wRlDux/view?usp=sharing" width="100%" height="800" type="application/pdf"></iframe>'
 
     # Displaying File
     st.markdown(pdf_display, unsafe_allow_html=True)
